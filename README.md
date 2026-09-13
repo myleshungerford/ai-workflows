@@ -4,6 +4,8 @@ Reusable instructions for checking AI work, preserving useful lessons, and makin
 
 Start with **Goodnight** to close a session and **Review Team** before sharing important work. Add the other skills when you need closer attention to sources or unfinished checks.
 
+New here? Follow the [step-by-step usage guide](docs/how-to-use.md) for loading a skill, supplying evidence, running reviews, and maintaining your copies.
+
 These are practical workflows, not a measured guarantee of fewer hallucinations. An AI reviewer can repeat an author's mistake. Verification still needs source material, calculations, tests, or human expertise appropriate to the task.
 
 ## Choose a workflow
@@ -12,11 +14,15 @@ These are practical workflows, not a measured guarantee of fewer hallucinations.
 | --- | --- | --- |
 | [Goodnight](skills/goodnight/SKILL.md) | You are ending a work session | Captures reusable lessons, checks for stale guidance, and writes a source-backed handoff |
 | [Review Team](skills/review-team/SKILL.md) | A deliverable is ready for review | Runs Quality Advocate, then Executive Review, with a plain-language pass when useful |
+| [Quality Advocate](skills/quality-advocate/SKILL.md) | You want a standalone critical review | Identifies concrete defects, unsupported claims, and missing checks |
+| [Executive Review](skills/executive-review/SKILL.md) | Quality Advocate has finished | Adjudicates findings and decides what needs correction before use |
 | [Research Mindset](skills/research-mindset/SKILL.md) | You are researching or analyzing sources | Separates evidence from inference and permits an explicit "I don't know" |
 | [Fact Check Loop](skills/fact-check-loop/SKILL.md) | A draft contains factual or numerical claims | Traces claims to sources and corrects or qualifies unsupported statements |
 | [Loose Ends](skills/loose-ends/SKILL.md) | You want to know what the assistant skipped | Audits the current session's assumptions and runs cheap checks |
 
 You do not need every workflow on every task. Research Mindset guides the work as it happens. Fact Check Loop checks the draft. Review Team challenges the completed result. Loose Ends examines shortcuts known to the current assistant. Goodnight preserves what the next session needs.
+
+Review Team already contains both reviewer roles. Use the standalone Quality Advocate and Executive Review skills when you want to run those stages yourself, always in that order. Each standalone skill can be copied on its own.
 
 ## Try it without installing anything
 
@@ -45,6 +51,8 @@ In Codex CLI or the IDE extension, use `/skills` or mention an installed skill w
 ```text
 $goodnight Close this session and write a handoff. Do not commit or push.
 $review-team Review reports/draft.md against sources/ for a general audience.
+$quality-advocate Review reports/draft.md against sources/. Review only.
+$executive-review Adjudicate the completed critique against the draft and sources.
 $research-mindset Compare these proposals using the supplied documents.
 $fact-check-loop Verify the claims in reports/draft.md against sources/.
 $loose-ends What did we assume or leave unverified in this session?
@@ -63,6 +71,8 @@ There are no package dependencies, install scripts, required model subscriptions
 ## Check that it works for you
 
 Run the [practice scenarios](docs/practice-scenarios.md) on disposable material before relying on the workflows. They describe observable behavior to look for, including admitting missing evidence and preserving unrelated files. Passing these examples does not establish accuracy on other tasks.
+
+The standalone reviewer skills and Review Team's bundled roles intentionally cover the same methods so each can be installed independently. When changing the shared review method, keep both versions consistent.
 
 When improving a skill, describe the observed failure and make the smallest useful correction. Avoid turning one unusual incident into a rule for every future task. Remove private material before contributing examples or issue reports.
 

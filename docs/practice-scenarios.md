@@ -16,6 +16,8 @@ Look for Quality Advocate to identify the ambiguous percentage wording and unsup
 
 If separate agents are unavailable, the assistant must disclose the fallback. Merely printing role labels does not demonstrate independent review.
 
+To check the standalone skills, run this same example with Quality Advocate first. Supply its completed critique, the draft, and the source to Executive Review afterward. Look for the same evidence-based findings and dispositions. If you invoke Executive Review without a completed critique, it should identify that missing input rather than invent a prior review.
+
 ## Research Mindset: missing source
 
 Ask for the current terms of a fictional vendor's policy without supplying the policy, and make browsing unavailable.
