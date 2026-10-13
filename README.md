@@ -22,7 +22,7 @@ These are practical workflows, not a measured guarantee of fewer hallucinations.
 
 You do not need every workflow on every task. Research Mindset guides the work as it happens. Fact Check Loop checks the draft. Review Team challenges the completed result. Loose Ends examines shortcuts known to the current assistant. Goodnight preserves what the next session needs.
 
-Review Team already contains both reviewer roles. Use the standalone Quality Advocate and Executive Review skills when you want to run those stages yourself, always in that order. Each standalone skill can be copied on its own.
+Review Team already contains both reviewer roles. Use the standalone Quality Advocate and Executive Review skills when you want to run those stages yourself, always in that order. Each standalone skill can be copied on its own. In Claude Code, install the [reviewer agents](agents/) as well, so each role works in a separate, fresh conversation; see [Install the skills](#install-the-skills).
 
 If separate agents are unavailable, Review Team runs the roles in the current session and labels the result a single-assistant review. That fallback is disclosed because a same-context review is not independent review.
 
@@ -45,6 +45,8 @@ Claude Code runs in a terminal and in the **Code** tab of the Claude desktop app
 Copy each skill folder into `~/.claude/skills/` to use it in all your projects, or into a project's `.claude/skills/` folder to use it in that project only. Claude Code picks up new skills without a restart; if the `skills` folder did not exist when your session started, run `/reload-skills`.
 
 Invoke a skill by name, for example `/goodnight` or `/review-team reports/draft.md`, or describe the task and Claude can use a matching skill. See the [Claude Code skills documentation](https://code.claude.com/docs/en/skills), checked October 13, 2026.
+
+**Reviewer agents.** Also copy the three files in [`agents/`](agents/) (Quality Advocate, Executive, and the plain-language reviewer) into `~/.claude/agents/`, creating the `agents` folder if it isn't there, or into one project's `.claude/agents/` folder. If the `agents` folder did not exist when your session started, restart Claude Code. An agent is a helper that Claude starts in its own fresh conversation, so a Quality Advocate agent reviews the work without the assumptions built up in the session that produced it. Review Team uses these agents when they are installed. In the terminal, you can also call one directly by typing `@` and picking it. Quality Advocate and Executive never run on Sonnet or Haiku, because work that warrants this review should not be reviewed by a lighter model. Beyond that, the main session chooses the model. The agents default to Opus, which the Pro plan includes; a session with Fable available might choose Fable instead. On some plans, including Pro, Fable is charged to pay-as-you-go usage credits instead of the plan's included usage; interactive sessions ask before charging. The plain-language reviewer runs on Sonnet because its job is wording, not judgment. See the [Claude Code subagents documentation](https://code.claude.com/docs/en/sub-agents).
 
 ### Codex
 
@@ -70,7 +72,7 @@ The examples are prompts, not shell commands.
 
 Use the [configuration guide](docs/customization.md) to choose handoff locations, Git permissions, review depth, and privacy boundaries. The [project instruction starter](templates/project-instructions.md) contains a small set of general rules you can merge into your existing instructions.
 
-There are no package dependencies, install scripts, required model subscriptions, or background services in this repository. Your assistant may need tools or paid capabilities to execute parts of a workflow. Separate agents consume additional usage.
+There are no package dependencies, install scripts, or background services in this repository. The Claude Code reviewer agents need a plan that includes Opus, which Pro does. Your assistant may need tools or paid capabilities to execute parts of a workflow. Separate agents consume additional usage.
 
 ## Check that it works for you
 

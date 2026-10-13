@@ -12,7 +12,7 @@ The workflows are ordinary Markdown. Edit a copy and retain changes that fit you
 | Durable instruction edits | Propose changes unless authorized | You want the assistant to maintain specified project files |
 | Git actions | No commit or push permission implied by a skill | You explicitly authorize named actions or set a scoped standing rule |
 | Review mode | Separate agents if allowed; disclose fallback | Your tool lacks delegation or usage cost matters |
-| Reviewer model | A capable model within your budget | A task needs particular reasoning or tool capabilities |
+| Reviewer model | Claude: never Sonnet or Haiku for Quality Advocate and Executive Review; otherwise the main session's choice, Opus by default. Other tools: a capable model within your budget | Your session has another allowed model, such as Fable, that suits the review |
 | Plain-language review | Use for non-technical or external readers | The user requests it or asks to skip it |
 | Source access | Use approved files and tools | You authorize an additional source or service |
 
@@ -42,4 +42,4 @@ The additional skills recommended here are Research Mindset, Fact Check Loop, an
 
 Further candidates for a later collection include a dependency review before installing packages, a source-data intake check, and a debugging workflow that reproduces a failure before editing code. Those need more environment-specific choices and are not included in this initial collection.
 
-This public edition adapts a personal workflow collection. It keeps the closeout and sequential review methods while removing personal paths, domain-specific assumptions, fixed model tiers, mandatory new-skill approval rituals, and automatic Git actions.
+This public edition adapts a personal workflow collection. It keeps the closeout and sequential review methods while removing personal paths, domain-specific assumptions, mandatory new-skill approval rituals, and automatic Git actions.

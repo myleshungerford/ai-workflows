@@ -6,7 +6,7 @@ This repository is a set of written instructions, called skills, that make Claud
 
 Use a short piece of writing that contains facts or numbers, such as a summary an AI wrote for you, along with the source it came from. Put both in one folder.
 
-1. Download this repository (on GitHub, **Code > Download ZIP**) and extract it. Then install [Review Team](skills/review-team/SKILL.md) by copying its whole folder, including `references/`, as described in [Install the skills](README.md#install-the-skills).
+1. Download this repository (on GitHub, **Code > Download ZIP**) and extract it. Then install [Review Team](skills/review-team/SKILL.md) by copying its whole folder, including `references/`, as described in [Install the skills](README.md#install-the-skills). In Claude Code, also copy the three reviewer files in the `agents/` folder into `~/.claude/agents/` (create the `agents` folder if needed), so each review runs in a fresh conversation, separate from the one that wrote the draft.
 2. Open Claude Code or Codex in the folder that holds your draft and source. In the Claude desktop app, Claude Code is the **Code** tab; choose **Local** (it runs on your computer, where you installed the skill) and select the folder before your first message. In a terminal, move into the folder first, for example with `cd path/to/folder`.
 3. Send this as one message, using your own file names. In Codex CLI or the IDE extension, type `$review-team` instead of `/review-team`.
 

@@ -13,13 +13,13 @@ Identify the artifact, version, intended audience, requirements, and available s
 
 Default to review only. Apply fixes if the user has authorized editing or completion of the deliverable. A review request alone does not authorize sending, publishing, or modifying external records.
 
-Read [reviewer roles](references/reviewer-roles.md). These instructions are included with this skill; no other installed skills or named model tiers are required.
+Read [reviewer roles](references/reviewer-roles.md). These instructions are included with this skill; no other installed skills are required. In Claude Code, if this repository's `quality-advocate`, `executive`, and `plain-language-reviewer` agents are installed, use them for the matching roles and give each the same inputs described below, plus the matching role section from the reviewer roles reference.
 
 ## Choose an honest review mode
 
 When separate agents are available and allowed, use a fresh reviewer context for Quality Advocate. Supply the actual artifact, original requirements, audience, sources, and necessary access constraints. Do not prime the reviewer with the author's preferred conclusion. The reviewer should inspect underlying evidence directly when possible.
 
-Use a model capable of the task within the user's budget. A different model or another agent does not make the evidence independent. Do not claim a particular model was used unless the tool confirms it.
+With Claude models, never run Quality Advocate or Executive Review on Sonnet or Haiku: work that warrants this review should not be reviewed by a lighter model. Otherwise the main session chooses the model, with Opus as the default. With other tools, use a model capable of the task within the user's budget. A different model or another agent does not make the evidence independent. Do not claim a particular model was used unless the tool confirms it.
 
 If delegation is unavailable or disallowed, perform the roles sequentially in the current context and label the result a **single-assistant review**, not an independent or cold review. If a truly independent review was explicitly required, report that requirement as unmet and provide a review packet for another reviewer. Never invent agent responses.
 
