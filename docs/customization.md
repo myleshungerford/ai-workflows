@@ -8,6 +8,7 @@ The workflows are ordinary Markdown. Edit a copy and retain changes that fit you
 | --- | --- | --- |
 | Handoff location | `handoffs/` in the project root | Your project already has a continuity folder |
 | Handoff retention | Keep existing files | You have an explicit archive policy |
+| Notes on how processes and data work | `PROCESS_DICTIONARY.md` in the project root | Your project already has a reference document for this; Goodnight will use it instead |
 | Durable instruction edits | Propose changes unless authorized | You want the assistant to maintain specified project files |
 | Git actions | No commit or push permission implied by a skill | You explicitly authorize named actions or set a scoped standing rule |
 | Review mode | Separate agents if allowed; disclose fallback | Your tool lacks delegation or usage cost matters |
@@ -27,11 +28,11 @@ the push for this task. Use one reviewer, then Executive Review.
 
 Settings written in prose are instructions to the assistant, not enforced permission controls. Use your tool's actual access and approval settings for enforcement.
 
-## Adapt to your computer or assistant
+## Adapt to your computer
 
 Keep project paths relative wherever possible. Resolve the actual project root before writing. Use your operating system's file tools and your project's verification commands. These skills do not require a particular shell, secret store, model name, or account.
 
-If your assistant does not support skills, paste the chosen workflow and its linked references into the conversation. If it lacks filesystem access, request a handoff or proposed changes as text. If it lacks independent agents, use the disclosed single-assistant review or give the review packet to another session or person.
+If separate agents are unavailable or not allowed, use the disclosed single-assistant review, or give the review packet to another session or person.
 
 Never put credentials, personal records, private transcripts, or confidential source data into public skill files or practice examples. Supply sensitive evidence only through tools and storage approved for that data. A request to fact-check does not itself authorize uploading files to a new service.
 

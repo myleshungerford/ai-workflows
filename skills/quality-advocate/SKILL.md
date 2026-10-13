@@ -15,6 +15,8 @@ Default to review only unless edits are authorized. This skill does not authoriz
 
 Use a fresh context when one is available and authorized. Otherwise disclose that this is a same-context review. Do not claim independent scrutiny merely because you adopted a reviewer role. No particular model or agent framework is required.
 
+You may be one of several Quality Advocates, each assigned a focus such as evidence (are claims traced to sources), argument (does the reasoning hold), or completeness (what is missing). If you were given a focus, cover it thoroughly and say which focus you covered. Do not soften a finding because another reviewer might catch it, or withhold one because it may belong to another reviewer's focus. Overlap is cheap; a gap is not.
+
 ## Check what matters
 
 For each consequential claim or decision, consider the most plausible alternative explanation and the observation that would distinguish it. Check whether the conclusion answers the user's actual question.

@@ -1,14 +1,10 @@
 # How to use this repository
 
-This repository contains reusable instructions for an AI assistant. You can use one workflow at a time, install selected skills in a compatible tool, or copy the instructions into a chat. You do not need to run this repository as an application.
+This repository contains reusable instructions for Claude Code and Codex. You can install one workflow at a time. You do not need to run this repository as an application.
 
-## 1. Choose how to load the instructions
+## 1. Install the skills you want
 
-**Without installation:** Open the desired `SKILL.md` from the [README's skill list](../README.md), copy its contents, and paste them into your assistant with your request. Supply any linked references as well. Review Team needs its `references/reviewer-roles.md` file; the standalone Quality Advocate and Executive Review skills each contain their own complete instructions.
-
-**With Codex:** Follow the [installation instructions](../README.md#install-in-codex). Copy the whole skill folder to a supported skill location. Merely downloading or cloning this repository does not install its `skills/` folders. Do not overwrite an existing skill without comparing it first.
-
-**With another assistant:** Use the paste-in approach or the tool's documented skill mechanism. Do not assume Codex's paths or invocation syntax work in other products.
+Follow the [installation instructions](../README.md#install-the-skills) for your tool. Copy the whole skill folder to the skills location for your tool; Review Team needs its `references/reviewer-roles.md` file, while the standalone Quality Advocate and Executive Review skills each contain their own complete instructions. Merely downloading this repository, or copying it with Git (called cloning), does not install its `skills/` folders. Do not overwrite an existing skill without comparing it first.
 
 ## 2. Supply the work and evidence
 
@@ -17,8 +13,8 @@ Tell the assistant which artifact and version to examine, who will use it, and w
 For example:
 
 ```text
-Review the attached draft for a general audience. The attached source table
-is the evidence for its numerical claims. Identify unsupported conclusions
+Review reports/draft.md for a general audience. sources/table.csv is the
+evidence for its numerical claims. Identify unsupported conclusions
 and the smallest corrections needed. Review only; do not edit or publish.
 ```
 
@@ -28,7 +24,7 @@ If the assistant cannot open a source, supply its relevant contents through an a
 
 Use **Review Team** for the complete sequence. It already includes Quality Advocate, Executive Review, and the optional plain-language role. Installing the two standalone skills is optional, and there is no need to run them again after Review Team without a specific reason.
 
-Use the standalone skills when you want to control the stages yourself. In Codex, after installation:
+Use the standalone skills when you want to control the stages yourself. In Codex, after installation (in Claude Code, use `/quality-advocate` and `/executive-review`):
 
 ```text
 $quality-advocate Review reports/draft.md against sources/table.csv.
