@@ -4,6 +4,8 @@ Reusable instructions for checking AI work, preserving useful lessons, and makin
 
 Start with **Review Team** before sharing important work. Add **Goodnight** once a project spans several sessions, and the other skills when you need closer attention to sources or unfinished checks.
 
+**Quickest install:** paste this into Claude Code: `Install the review-team skill and the three reviewer agents from https://github.com/myleshungerford/ai-workflows, following its README.` In Codex, ask for the skill only; the agents are Claude Code files.
+
 New to Claude Code or Codex? Read [Start here](START-HERE.md) first. It has a five-minute first try, a worked example, and a glossary. Then follow the [step-by-step usage guide](docs/how-to-use.md) for loading a skill, supplying evidence, running reviews, and maintaining your copies.
 
 These are practical workflows, not a measured guarantee of fewer hallucinations. An AI reviewer can repeat an author's mistake. Verification still needs source material, calculations, tests, or human expertise appropriate to the task.
