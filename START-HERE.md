@@ -8,7 +8,7 @@ Use a short piece of writing that contains facts or numbers, such as a summary a
 
 1. Download this repository (on GitHub, **Code > Download ZIP**) and extract it. Then install [Review Team](skills/review-team/SKILL.md) by copying its whole folder, including `references/`, as described in [Install the skills](README.md#install-the-skills). In Claude Code, also copy the three reviewer files in the `agents/` folder into `~/.claude/agents/` (create the `agents` folder if needed), so each review runs in a fresh conversation, separate from the one that wrote the draft.
 2. Open Claude Code or Codex in the folder that holds your draft and source. In the Claude desktop app, Claude Code is the **Code** tab; choose **Local** (it runs on your computer, where you installed the skill) and select the folder before your first message. In a terminal, move into the folder first, for example with `cd path/to/folder`.
-3. Send this as one message, using your own file names. In Codex CLI or the IDE extension, type `$review-team` instead of `/review-team`.
+3. Send this as one message, using your own file names. In Codex CLI or the IDE extension, type `$review-team` instead of `/review-team`; in the ChatGPT desktop app, type `@` and pick review-team.
 
    ```text
    /review-team Review draft.md against source.md for a general audience.
@@ -46,7 +46,7 @@ The steps below use one example source, the federal CIP 2020 to SOC 2018 crosswa
 
 1. Download the crosswalk spreadsheet from the [NCES CIP resources page](https://nces.ed.gov/ipeds/cipcode/resources.aspx?y=56) into an empty folder. The assistant may ask permission to run a short command to read a spreadsheet. That is expected, and a command that only reads the file is safe to approve.
 2. Before installing Research Mindset, open a session in that folder and ask a question the file cannot fully answer: "Using only this file, what jobs do graduates of [a program you know] get, and which of them pays best?"
-3. Install Research Mindset the same way as Review Team. Then start a fresh session in the same folder, not a continuation of the first chat, and ask the same question, starting with `/research-mindset` in Claude Code or `$research-mindset` in Codex.
+3. Install Research Mindset the same way as Review Team. Then start a fresh session in the same folder, not a continuation of the first chat, and ask the same question, starting with `/research-mindset` in Claude Code, `$research-mindset` in Codex CLI, or `@` and research-mindset in the ChatGPT app.
 4. Compare the answers. Which one separates what the file shows from what it brings in from elsewhere? Which one says what it does not know and names the evidence it would need? Did either present a number or conclusion that is not in the file as if the file showed it?
 
 If you use your own source, ask something it cannot fully answer. For a table of figures over several years, "why did [the figure] change?" works well, because the table shows what changed but not why.

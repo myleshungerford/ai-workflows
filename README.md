@@ -54,7 +54,7 @@ Invoke a skill by name, for example `/goodnight` or `/review-team reports/draft.
 
 Copy each skill folder into your personal `~/.agents/skills/` directory, or your project's `.agents/skills/` directory.
 
-In Codex CLI or the IDE extension, use `/skills` or mention an installed skill with `$`, for example:
+In the ChatGPT desktop app, where Codex now runs, type `@` and pick the skill from the list. In Codex CLI or the IDE extension, use `/skills` or mention an installed skill with `$`, for example:
 
 ```text
 $goodnight Close this session and write a handoff. Do not commit or push.
